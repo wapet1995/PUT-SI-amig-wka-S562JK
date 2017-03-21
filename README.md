@@ -1,1 +1,1 @@
-# PUT-SI-amig-wka-S562JK
+# PUT SI lamiglowka S562JK
