@@ -95,7 +95,7 @@ E4 = 5,
 E1 #\= 5,
 E2 #\= 5,
 E3 #\= 5,
-E5 #\= 5.
+E5 #\= 5,
  
 /*rozgraniczenia podstawowe */
 A1#\=A2,
