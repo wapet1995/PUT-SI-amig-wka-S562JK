@@ -1,0 +1,76 @@
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.exe.config
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.exe
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.pdb
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.Form1.resources
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.Properties.Resources.resources
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.csproj.GenerateResource.Cache
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.exe
+C:\Users\Krystian\Documents\Visual Studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.pdb
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\SwiPlCs.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\SwiPlCs.xml
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.CrewNamesWindow.resources
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\ZedGraph.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\ZedGraph.xml
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Krystian\documents\visual studio 2012\Projects\CrewAllocationForms\CrewAllocationForms\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.exe.config
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.exe
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.pdb
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.exe
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.pdb
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\SwiPlCs.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\SwiPlCs.xml
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\ZedGraph.xml
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.csprojResolveAssemblyReference.cache
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.Form1.resources
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.Properties.Resources.resources
+C:\Users\Grzesiek_\Desktop\Studia\przedmioty\semestr VI\Sztuczna Inteligencja\projekt\SI\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.csproj.GenerateResource.Cache
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.exe.config
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.exe
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.pdb
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.exe
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\CrewAllocationForms.pdb
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\SwiPlCs.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\SwiPlCs.xml
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\ZedGraph.xml
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\hu\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\it\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\ja\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\pt\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\ru\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\sk\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\tr\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\zh-cn\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\bin\Debug\zh-tw\ZedGraph.resources.dll
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.csprojResolveAssemblyReference.cache
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.Form1.resources
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.Properties.Resources.resources
+C:\Users\Krystian\Desktop\CrewAllocationForms\CrewAllocationForms\obj\Debug\CrewAllocationForms.csproj.GenerateResource.Cache

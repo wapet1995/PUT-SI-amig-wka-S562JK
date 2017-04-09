@@ -1,0 +1,236 @@
+:- module(crewProb, [test/1, matchTeams/3]).
+:- use_module(library(clpfd)).
+
+test(Teams) :-
+	Crew =
+	%
+	% atrybuty pracowników:
+	% [steward, stewardessa, francuski, niemiecki, hiszpañski]
+	%
+	[[1,0,0,0,1],   % Tom     = 1
+	 [1,0,0,0,0],   % David   = 2
+	 [1,0,0,0,1],   % Jeremy  = 3
+	 [1,0,0,0,0],   % Ron     = 4
+	 [1,0,0,1,0],   % Joe     = 5
+	 [1,0,1,1,0],   % Bill    = 6
+	 [1,0,0,1,0],   % Fred    = 7
+	 [1,0,0,0,0],   % Bob     = 8
+	 [1,0,0,1,1],   % Mario   = 9
+	 [1,0,0,0,0],   % Ed      = 10
+
+	 [0,1,0,0,0],   % Carol   = 11
+	 [0,1,0,0,0],   % Janet   = 12
+	 [0,1,0,0,0],   % Tracy   = 13
+	 [0,1,0,1,1],   % Marilyn = 14
+	 [0,1,0,0,0],   % Carolyn = 15
+	 [0,1,0,0,0],   % Cathy   = 16
+	 [0,1,1,1,1],   % Inez    = 17
+	 [0,1,1,0,0],   % Jean    = 18
+	 [0,1,0,1,1],   % Heather = 19
+	 [0,1,1,0,0]    % Juliet  = 20
+	],
+	
+	CrewNames = [tom, david, jeremy, ron, joe,
+				 bill, fred, bob, mario, ed,
+				 carol, janet, tracy, marylin, carolyn,
+				 cathy, inez, jean, heather, juliet],
+	
+	%
+	% Wymagania kolejnych lotów:
+	% [wymagana za³oga, min. stewardów, min. stewardess,
+	%   min. franc., min. niem., min. hiszp. jêzycznych ]
+	%
+	Requires = [[4, 1,1,1,1,1],
+				[5, 1,1,1,1,1], 
+				[5, 1,1,1,1,1],
+				[6, 2,2,1,1,1],
+				[7, 3,3,1,1,1],
+				[4, 1,1,1,1,1],
+				[5, 1,1,1,1,1],
+				[6, 1,1,1,1,1],
+				[6, 2,2,1,1,1],
+				[7, 3,3,1,1,1]
+			   ],
+
+	matchTeams(Teams, Requires, Crew),
+	 
+	nl,
+	printTeams(Teams, CrewNames),
+	nl
+.
+		
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dopasuj za³ogê do wymagañ lotów. Wynik zwracany jest przez parametr Teams.
+% Teams: macierz przypisañ pracowników do lotów, wiersze to kolejne loty,
+%        a kolumny to pracownicy. Wartoœæ 1 oznacza ¿e pracownik bierze udzia³
+%        w danym locie.
+% Requires: wymagania kolejnych lotów w postaci listy list o elementach:
+%        [l. pracowników, min. stewardów, min. stewardess, franc., niem., hiszp. jêzyczni]
+% Crew: lista pracowników, ka¿dy pracownik opisany jako lista atrybutów (0/1):
+%        [steward, stewardessa, francusko-, niemiecko-, hiszpañskojêzyczny]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+matchTeams(Teams, Requires, Crew) :-
+
+	length(Requires, NumFlights),
+	length(Crew, CrewCount),
+				   
+
+	splitRequires(Requires, ReqCrewCount, FlightsReqs),
+
+	teamsMatrix(Teams, NumFlights, CrewCount, ReqCrewCount),
+	 
+
+	checkFlightsReqs(Teams, FlightsReqs, Crew),
+
+	flattenMatrix(Teams, TeamsList),
+	labeling([ff,bisect,down], TeamsList)
+.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%
+% Podzia³ listy wymagañ wszystkich lotów na dwie listy:
+% listê wymaganej za³ogi dla kolejnych lotów oraz listê pozosta³ych wymagañ.
+%
+splitRequires([], [], []).
+splitRequires([[RE|RL]|RestCrew], [RE|RestEmps], [RL|RestLangs]) :-
+	splitRequires(RestCrew, RestEmps, RestLangs).
+
+%
+% teamsMatrix(Teams, Flights, CrewCount, RequiredCrewCount).
+%  Teams: Macierz przydzielonych zespo³ów w postaci:
+%         wiersze - kolejne loty, kolumny: pracownicy.
+%         Wartoœæ 1 oznacza ¿e pracownik bierze udzia³ w danym locie.
+%  Flighs: lista wymagañ lotów.
+%  CrewCount: liczba pracowników (wszystkich).
+%  RequiredCrewCount: lista wymaganej za³ogi, dla wszystkich lotów.
+%
+% Zapewnienie tutaj utworzenia listy przypisañ o liczbie jedynek równej
+% liczbie wymaganej za³ogi znacznie przyspiesza obliczenia, bo generowane s¹
+% tylko niezbêdne permutacje.
+%
+% Sprawdzany jest tutaj tak¿e wymóg co do przerwy 2 lotów miêdzy lotami
+% w których bierze udzia³ pracownik (dla wydajnoœci).
+%
+teamsMatrix([Team], 1, CrewCount, [ReqCrewCount]) :-
+	length(Team, CrewCount),
+	Team ins 0..1,
+	% ograniczenie na liczbê wymaganej za³ogi
+	sum(Team, #=, ReqCrewCount).
+teamsMatrix([Team|RestTeams], Flights, CrewCount, [ReqCrewCount|RestReqs]) :-
+	teamsMatrix(RestTeams, RestFlights, CrewCount, RestReqs),
+	Flights #= RestFlights+1,
+	length(Team, CrewCount),
+	Team ins 0..1,
+	sum(Team, #=, ReqCrewCount),
+	% sprawdzenie wymagania min. 2 lotów przerwy
+	checkBreaks([Team|RestTeams]).
+
+%
+% checkFlightsReqs(Teams, FlightsReqirements, Crew).
+% Sprawdzenie czy zespo³y spe³niaj¹ wymagania minimalnej liczby pracowników
+% danej p³ci oraz co do znajomoœci jêzyków.
+%
+checkFlightsReqs([], [], _).
+checkFlightsReqs([Team|RestTeams], [FlightsReq|RestReqs], Crew) :-
+	% Sprawdza czy zespó³ spe³nia minimalne wymagania co do za³ogi.
+	checkEmployees(Team, TeamAttrbts, Crew),
+	% Sprawdzenie czy ka¿dy element wektora arybutów zespo³u spe³nia wymagania
+	checkRelation(TeamAttrbts, FlightsReq, #>=),
+	checkFlightsReqs(RestTeams, RestReqs, Crew).
+
+%
+% checkEmployees(Teams, Requirements, TeamsAttributes, Crew).
+% Zlicza pracowników o danych atrybutach.
+% Kolejno: za³ogi w formie wektora przypisañ pracowników,
+% wymagañ lotów (opróc liczby za³ogi),
+% wektor atrybutów (suma pracowników spe³niaj¹cych odpowiednie wymagania),
+% lista cech wszystkich pracowników.
+%
+checkEmployees([], [0,0,0,0,0], _).
+checkEmployees([0|RT], TeamAttrbts, [_|Crew]) :-
+	% pracownik nie bierze udzia³u w locie - nie rozpatruj
+	checkEmployees(RT, TeamAttrbts, Crew).
+checkEmployees([1|RT], TeamAttrbts, [EAttr|Crew]) :-
+	checkEmployees(RT, RAttr, Crew),
+	% dodaj wektor cech pracownika do wektora cech zespo³u
+	addVector(RAttr, EAttr, TeamAttrbts).
+
+%
+% Sprawdzenie czy w macierzy przypisañ pracowników do lotów (Teams)
+% zapewniony jest warunek wg. ka¿dy z pracowników ma 2 loty wolnego
+% po ka¿dym odbytym locie.
+% Rozpatrywane s¹ sumy wektorów (przypisañ pracowników) lotu.
+% Je¿eli suma dwóch przypisañ do lotów posiada liczbê 2,
+% to oznacza ¿e ktoœ jest przypisany do obu lotów.
+% Wymaga przynajmniej 2 lotów.
+%
+% ! Rozpatrywany jest tylko pierwszy wiersz macierzy (tj. dla niego sprawdzana
+% jest wymagana zale¿noœæ wzdglêdem dwóch nastêpuj¹cych po nim lotów).
+%
+checkBreaks([A,B]) :-
+	addVector(A,B,AB),
+	AB ins 0..1.
+checkBreaks([A,B,C|R]) :-
+	addVector(A,B,AB),
+	AB ins 0..1,
+	addVector(A,C,AC),
+	AC ins 0..1.
+	%checkBreaks([B,C|R]).	% teraz sprawdzane jest w teamsMatrix/4 co poprawi³o wydajnoœæ
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% pomocnicze %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+%
+% checkRelation(ListA, ListB, Relation).
+% Sprawdza czy kolejne pary elementów z obu listy (powinny byæ równoliczne) 
+% zachowuj¹ podan¹ relacjê.
+%
+checkRelation([], [], _).
+checkRelation([A|AR], [B|BR], Rel) :-
+	call(Rel,A,B),
+	checkRelation(AR, BR, Rel).
+
+%
+% addVector(VecA, VecB, Result).
+% Dodanie do siebie odpowiadaj¹cych sobie elementów wektora.
+%
+addVector([], [], []).
+addVector([A|RA], [B|RB], [C|Res]) :-
+	addVector(RA,RB,Res),
+	C #= A+B.
+
+%
+% flattenMatrix(Mat, List).
+% £¹czy wszystkie wiersze (listy) macierzy w jedn¹ listê.
+%
+flattenMatrix([T], T).
+flattenMatrix([T|RT], TL) :-
+	flattenMatrix(RT, RTL),
+	append(T, RTL, TL).
+	
+%
+% Wydrukowanie listy przypisañ do lotów.
+% Loty s¹ numerowane od 1, imiona pracowników oddzielone spacjami.
+%
+printTeams(Teams, CrewNames) :-
+	printTeams(Teams, 1, CrewNames).
+printTeams([T], Nr, Names) :-
+	format('Lot ~a: ', Nr),
+	printTeam(T, Names).
+printTeams([T|R], Nr, Names) :-
+	format('Lot ~a: ', Nr),
+	printTeam(T, Names),
+	Nr2 is Nr+1,
+	printTeams(R, Nr2, Names).
+
+%
+% Wypisz listê imion pracowników z jednego lotu, oddzielonych spacjami.
+%
+printTeam([], _) :-	nl.
+printTeam([0|R], [_|RNames]) :-
+	printTeam(R, RNames).
+printTeam([1|R], [Name|RNames]) :-
+	format('~w ', Name),
+	printTeam(R, RNames).
+	
