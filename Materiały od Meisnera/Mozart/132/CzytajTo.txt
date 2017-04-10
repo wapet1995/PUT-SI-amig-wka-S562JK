@@ -1,0 +1,12 @@
+Instalacja systemu Mozart 1.3.2
+===============================
+
+1. Instalacja œrodowiska edycyjnego Emacs: uruchomic program 
+   z pliku emacs-20.7.exe. Uwaga: pozostawiæ domyœlne œcie¿ki.
+
+2. Krok opcjonalny. W przypadku problemów na platformie NT4,
+   uruchomiæ program z pliku instmsiW.exe po czym zrestartowaæ
+   komputer.
+
+3. Instalacja systemu Mozart: uruchomiæ program z pliku
+   mozart-1.3.2.20060615.exe. Uwaga: pozostawiæ domyœlne œcie¿ki.
