@@ -1,8 +1,5 @@
 Problemy:
-Tabela A: problem z 2 i 5
 Tabela F: wyrzuca b³êdne rozwi¹zania
-
-Zdanie 7: b³¹d
 
 Pe³ne wywo³anie funkcji dla tabel:
 A: 2,4,5,3,1
