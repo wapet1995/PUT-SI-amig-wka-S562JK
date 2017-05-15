@@ -72,9 +72,30 @@ zadanie_TEST():-
 	E2 #\= 5,
 	E3 #\= 5,
 	E5 #\= 5,
-	
+
+
 /*Uzupełnienie wyniku*/	
 	labeling([ff, enum, down],[A1,A2,A3,A4,A5,B1,B2,B3,B4,B5,C1,C2,C3,C4,C5,D1,D2,D3,D4,D5,E1,E2,E3,E4,E5,F1,F2,F3,F4,F5]),
+
+/* moj pomysl z indeksami */
+
+/* wytlumaczenie  */
+*/ dla przykladu A1=2 d1=4 */
+/* do tabeli c wpisujemy pod indeksem o numerze A1 czyli do drugiego elementu listy wedlug przykladu  wartosc z d1 czyli 4 inaczej tak by wygladala po tym tabela c=[_,4_,_,_] */
+/* uzbrujcie sie w cierpliwosc mi chwile mieli to */
+
+nth1(D1,[C1,C2,C3,C4,C5],A1),
+nth1(D2,[C1,C2,C3,C4,C5],A2),
+nth1(D3,[C1,C2,C3,C4,C5],A3),
+nth1(D4,[C1,C2,C3,C4,C5],A4),
+nth1(D5,[C1,C2,C3,C4,C5],A5),
+
+nth1(A1,[C1,C2,C3,C4,C5],D1),
+nth1(A2,[C1,C2,C3,C4,C5],D2),
+nth1(A3,[C1,C2,C3,C4,C5],D3),
+nth1(A4,[C1,C2,C3,C4,C5],D4),
+nth1(A5,[C1,C2,C3,C4,C5],D5),
+
 
 /*Wypisanie rozwiązania*/	
 	write("A = "), writeln(X1),
