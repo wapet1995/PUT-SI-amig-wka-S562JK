@@ -5,16 +5,18 @@ import javax.swing.JTable;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
+import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import org.jpl7.Query;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
-import java.awt.Toolkit;
 
 public class S562JK {
 
-	private JFrame frmamigwkaSjk;
+	private JFrame frame;
 	private String[] columnNames = {"Wedding Year","First Names","Soft Drinks","Songs"};
 	
 	private JTable table;
@@ -27,7 +29,7 @@ public class S562JK {
 			public void run() {
 				try {
 					S562JK window = new S562JK();
-					window.frmamigwkaSjk.setVisible(true);
+					window.frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -45,14 +47,11 @@ public class S562JK {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	@SuppressWarnings("serial")
 	private void initialize() {
-		frmamigwkaSjk = new JFrame();
-		frmamigwkaSjk.setTitle("\u0141amig\u0142\u00F3wka S562JK");
-		frmamigwkaSjk.setIconImage(Toolkit.getDefaultToolkit().getImage("G:\\Maciej\\studia\\Semestr VI\\Sztuczna Inteligencja\\moje\\laboratoria\\Projekt\\PUT-SI-lamiglowka-S562JK\\Grafika_S562JK\\ikona.PNG"));
-		frmamigwkaSjk.setResizable(false);
-		frmamigwkaSjk.setBounds(100, 100, 673, 160);
-		frmamigwkaSjk.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame = new JFrame();
+		frame.setResizable(false);
+		frame.setBounds(100, 100, 673, 160);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		String t1 = "consult('Lamiglowka S562JK.pl')";
         Query q1 = new Query(t1);
@@ -92,11 +91,9 @@ public class S562JK {
 				"Wedding Year", "First Names", "Soft Drinks", "Songs"
 			}
 		) {
-			@SuppressWarnings("rawtypes")
 			Class[] columnTypes = new Class[] {
 				String.class, Object.class, Object.class, String.class
 			};
-			@SuppressWarnings({ "unchecked", "rawtypes" })
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
 			}
@@ -105,12 +102,12 @@ public class S562JK {
 		table.setFillsViewportHeight(true);
 		table.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		JScrollPane scrollPane = new JScrollPane(table);
-		frmamigwkaSjk.getContentPane().add(scrollPane, BorderLayout.CENTER);
+		frame.getContentPane().add(scrollPane, BorderLayout.CENTER);
 		
 		JLabel lblNewLabel = new JLabel("S562JK");
 		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD | Font.ITALIC, 20));
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		frmamigwkaSjk.getContentPane().add(lblNewLabel, BorderLayout.NORTH);
+		frame.getContentPane().add(lblNewLabel, BorderLayout.NORTH);
 	}
 
 }

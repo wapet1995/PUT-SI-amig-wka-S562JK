@@ -5,8 +5,11 @@ import javax.swing.JTable;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
 import javax.swing.JScrollPane;
+import javax.swing.JButton;
 import javax.swing.SwingConstants;
 import org.jpl7.Query;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 import java.awt.Font;
 import java.awt.Color;
 import javax.swing.table.DefaultTableModel;
@@ -45,7 +48,6 @@ public class S562JK {
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	@SuppressWarnings("serial")
 	private void initialize() {
 		frmamigwkaSjk = new JFrame();
 		frmamigwkaSjk.setTitle("\u0141amig\u0142\u00F3wka S562JK");
@@ -92,11 +94,9 @@ public class S562JK {
 				"Wedding Year", "First Names", "Soft Drinks", "Songs"
 			}
 		) {
-			@SuppressWarnings("rawtypes")
 			Class[] columnTypes = new Class[] {
 				String.class, Object.class, Object.class, String.class
 			};
-			@SuppressWarnings({ "unchecked", "rawtypes" })
 			public Class getColumnClass(int columnIndex) {
 				return columnTypes[columnIndex];
 			}
