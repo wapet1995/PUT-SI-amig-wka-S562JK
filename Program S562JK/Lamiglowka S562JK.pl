@@ -151,8 +151,5 @@ s562jk(A1,A2,A3,A4,A5, B1,B2,B3,B4,B5, C1,C2,C3,C4,C5):-
 	
 	nth1(E5buf,[C1,C2,C3,C4,C5],B5),
 	nth1(E5buf,[E1,E2,E3,E4,E5],5),
-
-        /*Wypisanie rozwiązania*/
-/*-------------------------------------*/	
 	!.
 
